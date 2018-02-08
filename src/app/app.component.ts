@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PanelModule } from 'primeng/panel';
 
 @Component({
   selector: 'app-root',

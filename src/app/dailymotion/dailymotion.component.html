@@ -1,14 +1,17 @@
-<app-header></app-header>
 <h2>Playing with REST service</h2>
 <form>
-  <input type="text" [(ngModel)]="searchString"  name="search"/>
+  <input type="text" [(ngModel)]="searchString" name="search" />
   <button (click)="search()">Search !</button>
 </form>
 <br/>
-<div *ngIf="videoList">
-  <div *ngFor="let video of videoList">
-      <button id="button" (click)="openVideo(video)">{{  video.title }} </button>
 
- 
-</div>
-</div>
+<p-dataList [value]="videoList" *ngIf="videoList">
+  <p-header>
+    Résultat recherche
+  </p-header>
+  <ng-template let-video pTemplate="item">
+    <p-button label="Voir" (onClick)="openVideo(video)"></p-button> {{ video.title }} 
+ <!--   <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/{{video.id}}"></iframe> -->
+    <hr/>
+  </ng-template>
+</p-dataList>

@@ -3,6 +3,9 @@ import { DailymotionService } from '../dailymotion.service';
 
 import { Video } from '../../models/dailymotionResponse';
 
+import { DataListModule } from 'primeng/datalist';
+import { ButtonModule } from 'primeng/button';
+
 @Component({
   selector: 'app-dailymotion',
   templateUrl: './dailymotion.component.html',
