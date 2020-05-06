@@ -34,7 +34,7 @@ import { ROUTES } from './app.routes';
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
     PanelModule,
-    DataListModule,
+    //DataListModule,
     ButtonModule
   ],
   providers: [DailymotionService],
